@@ -1,0 +1,27 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 200px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+input {
+    padding: 0 20px 0 20px;
+    transition: 300ms;
+    width: 360px;
+    height: 60px;
+    background: none;
+    border: 1px solid $mainFontColor;
+    border-radius: 30px;
+    color: $mainFontColor;
+    font-family: $mainFontLight;
+    &::placeholder{ color: $placeholderColor }
+
+    @media screen and (max-width: $phoneWidth) {
+        width: 235px;
+        font-size: 18px;
+    }
+}

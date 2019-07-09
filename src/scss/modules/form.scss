@@ -1,0 +1,75 @@
+.form {
+    padding-top: 140px;
+    align-items: center;
+    justify-content: flex-start;
+    background: $formBgColor;
+    height: 580px;
+
+    @media screen and (max-width: $tableWidth) {
+        height: 970px;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        height: 870px;
+    }
+}
+
+.form-wrapper, form {
+    display: flex;
+    flex-direction: column;
+    min-width: 758px;
+
+    @media screen and (max-width: $tableWidth) {
+        margin-top: 25px;
+        min-width: 420px;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        min-width: 300px !important;
+    }
+
+    h2 {
+        margin-bottom: 12px;
+        text-align: center;
+        font-size: 40px;
+        line-height: 52px;
+        letter-spacing: -0.02em;
+
+        @media screen and (max-width: $tableWidth) {
+            font-size: 32px;
+        }
+
+        @media screen and (max-width: $phoneWidth) {
+            font-size: 22px !important;
+        }
+    }
+
+    p {
+        margin-top: 48px;
+        font-size: 1.5rem;
+        text-align: center;
+        white-space: pre-line;
+    }
+}
+
+form {
+    margin-top: 56px;
+    flex-direction: row;
+    justify-content: center;
+
+    .send {
+        margin-left: 40px;
+        width: 160px;
+        background: $btnColor;
+        color: $secondFontColor;
+        border-radius: 30px;
+        &:hover {
+            background: $btnColorAlt;
+        }
+
+        @media screen and (max-width: $phoneWidth) {
+            width: 120px;
+        }
+
+    }
+}

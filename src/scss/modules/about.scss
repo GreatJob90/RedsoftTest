@@ -1,0 +1,63 @@
+.about {
+    padding-top: 190px; 
+    transform: translateY(-40px);
+    position: relative;
+    height: 950px;
+    background: url('/assets/img/about-bg.png') center no-repeat;
+}
+
+.about-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    img{
+        margin-right: 33px;
+        width: 350px;
+        height: 650px;
+    }
+
+    .about-content {
+        max-width: 565px;
+        color: $mainFontColor;
+        h2 {
+            text-align: left;
+            margin-top: 79px;
+        }
+
+        p {
+            margin-top: 25px;
+        }
+
+        ul {
+            padding-left: 1em;
+            margin-top: 22px;
+        }
+
+        li {
+            margin-top: 22px;
+
+            &::before {
+                content: "\2022";
+                color: $listMarkerColor;
+                font-weight: bold;
+                display: inline-block;
+                width: 1em;
+                margin-left: -1em;
+            }
+        }
+    }
+
+    .make-request {
+        border-radius: 30px;
+        font-family: $mainFontBold;
+        margin-top: 38px;
+        background: $btnColor;
+        color: $secondFontColor;
+
+        &:hover {
+            width: 260px;
+            background: $btnColorAlt;
+            transform: translateY(-5px);
+        }
+    }
+}

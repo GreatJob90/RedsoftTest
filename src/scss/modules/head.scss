@@ -1,0 +1,109 @@
+.head {
+    position: relative;
+    z-index: 1;
+    padding-top: 10px;
+    height: 755px;
+    background: url('/assets/img/head-bg.png') center no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+header {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 1160px;
+    max-width: 1160px;
+    height: 70px;
+    .menu {
+        display: flex;
+        align-items: center;
+        flex-basis: 760px;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+
+    li {
+        display: inline-block;
+        font-family: $mainFontBold;
+        color: $secondFontColor;
+        white-space: nowrap;
+        a {
+            display: block;
+            padding: 8px 5px 8px 5px;
+            margin-right: 40px;
+            color: inherit;
+            &:hover {
+                background-image: radial-gradient(5px 5px, $secondFontColor 50%, transparent 50%);
+                background-position: bottom;
+                background-size: 5px 5px;
+                background-repeat: no-repeat;
+            }
+        }
+        .ghost-btn {
+            font-family: $mainFontLight;
+            border: 1px solid transparentize($secondFontColor,.8);
+            border-radius: 30px;
+            &:hover {
+                background: transparentize($secondFontColor,.8);
+            }
+        }
+    }
+}
+
+.head-content{
+    margin: 105px auto 0;
+    max-width: 760px;
+    color: $secondFontColor;
+    text-align: center;
+
+    p{
+        margin-top: 53px;
+        font-size: 1.5rem;
+    }
+
+    .learn-more {
+        font-family: $mainFontLight;
+        margin: 43px auto 0;
+        width: 180px;
+        background: $btnColor;
+        border-radius: 30px;
+        &:hover {
+           width: 260px;
+           background: $btnColorAlt;
+           transform: translateY(-5px);
+        }
+    }
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 148px auto 0;
+    width: 70px;
+    height: 16px;
+    border: 1px solid transparentize($secondFontColor, .8);
+    border-radius: 8px;
+    cursor: pointer;
+    span {
+        display: block;
+        padding: 5px 0 5px 0;
+        width: 1rem;
+        height: 1px;
+        background-image: linear-gradient(to right, transparentize($secondFontColor, .8) 100%, rgba(255, 255, 255, 0) 0%);
+        background-position: center;
+        background-size: 16px 1px;
+        background-repeat: no-repeat;
+        transition: 300ms;
+        &:last-child {
+            margin-left: 8px;
+        }
+        &:hover {
+            background-image: linear-gradient(to right, transparentize($secondFontColor, .1) 100%, rgba(255, 255, 255, 0) 0%);
+        }
+    }
+}

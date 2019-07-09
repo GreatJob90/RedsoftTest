@@ -1,0 +1,49 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+
+@import "modules/prims";
+@import 'modules/head.scss';
+@import 'modules/about.scss';
+@import 'modules/functions.scss';
+@import 'modules/form.scss';
+@import 'modules/modal.scss';
+
+
+html {
+    font-family: $mainFont;
+    font-size: $mainFontSize;
+    color: $mainFontColor;
+    background-color: $mainBgColor;
+    line-height: $mainLineHeight;
+    height: 100%;
+    @media screen and (max-width: $desktopWidth) {
+        
+    }
+
+    @media screen and (max-width: $smdesktopWidth) {
+        font-size: 15px;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+        font-size: 14px;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        
+    }
+
+}
+
+section{
+    margin: 0 auto;
+    width: 100vw;
+    max-width: 1920px;
+}
+
+h1, h2 {
+    font-size: 2.25rem;
+    text-align: center;
+}
